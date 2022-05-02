@@ -2,7 +2,7 @@
 
 set -eux
 
-mkdir "$HOME/bin"
+mkdir -p "$HOME/bin"
 
 ### Install
 sudo apt-get update
@@ -22,7 +22,8 @@ sudo chsh -s /bin/zsh "$USER"
 
 # Install zprezto
 zsh -c 'git clone --recursive https://github.com/utaka/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-(cd "${ZDOTDIR:-$HOME}/.zprezto" && git switch utaka)
+cd "${ZDOTDIR:-$HOME}/.zprezto"
+git switch utaka
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
