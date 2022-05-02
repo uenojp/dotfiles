@@ -6,7 +6,7 @@ set -eux
 sudo apt-get update
 sudo apt-get upgrade -y
 
-sudo apt-get install -y zsh
+sudo apt-get install -y vim-gtk zsh;
 sudo chsh -s /bin/zsh "$USER"
 
 # Install zprezto

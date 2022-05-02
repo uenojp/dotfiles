@@ -19,3 +19,6 @@ nnoremap k gk
 inoremap jj <ESC>
 inoremap jk <ESC>
 
+" Use system clipboard
+set clipboard=unnamedplus
+
