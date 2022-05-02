@@ -2,6 +2,8 @@
 
 set -eux
 
+mkdir "$HOME/bin"
+
 ### Install
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -36,4 +38,8 @@ git config --global init.defaultBranch main
 
 # Create symlink
 ln -s "$HOME/.dotfiles/vimrc" "$HOME/.vimrc"
+
+if [ -e /usr/bin/batcat ]; then
+    ln -s "/usr/bin/batcat" "$HOME/bin/bat"
+fi
 
