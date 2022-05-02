@@ -6,7 +6,16 @@ set -eux
 sudo apt-get update
 sudo apt-get upgrade -y
 
-sudo apt-get install -y vim-gtk xclip zsh;
+sudo apt-get install -y \
+    bat \
+    build-essential \
+    gdb \
+    nkf \
+    tree \
+    vim-gtk \
+    xclip \
+    zsh \
+    ;
 sudo chsh -s /bin/zsh "$USER"
 
 # Install zprezto
