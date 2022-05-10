@@ -11,10 +11,12 @@ sudo apt-get upgrade -y
 sudo apt-get install -y \
     bat \
     build-essential \
+    curl \
     gdb \
     nkf \
     tree \
     vim-gtk \
+    wget \
     xclip \
     zsh \
     ;
