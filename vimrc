@@ -46,3 +46,62 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
+" Install vim-plug and plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    \ >/dev/null 2>&1
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+
+Plug 'easymotion/vim-easymotion'
+Plug 'tomtom/tcomment_vim'
+Plug 'dense-analysis/ale'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'altercation/vim-colors-solarized'
+
+call plug#end()
+
+" easymotion
+" Disable default mapping
+let g:EasyMotion_do_mapping = 0
+" case-insensitive
+let g:EasyMotion_smartcase = 1
+" <Space>{char}
+nmap <Space> <Plug>(easymotion-overwin-f)
+
+" tcomment
+if !exists('g:tcomment_types')
+	let g:tcomment_types = {}
+endif
+let g:tcomment_types['c'] = '// %s'
+
+" ale
+let g:ale_fixers = {
+    \   'c': ['clang-format'],
+    \   'cpp': ['clang-format'],
+    \   'rust': ['rustfmt'],
+    \ }
+
+" asyncompletion
+" Tab completion
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+" Go to definition in new tab
+nmap gd :tab split<CR>:LspDefinition<CR>
+
+" vim-colors-solarized
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
+" Overwrite Pmenu
+highlight Pmenu ctermbg=White ctermfg=Black
+
