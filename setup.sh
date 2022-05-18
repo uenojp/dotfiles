@@ -13,7 +13,9 @@ sudo apt-get install -y \
     build-essential \
     curl \
     gdb \
+    gh \
     nkf \
+    shellcheck \
     tree \
     vim-gtk \
     wget \
