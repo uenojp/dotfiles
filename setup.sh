@@ -48,7 +48,7 @@ git config --global core.editor vim
 git config --global init.defaultBranch main
 
 # Create symlink
-ln -s "$HOME/.dotfiles/vimrc" "$HOME/.vimrc"
+ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
 
 if [ -e /usr/bin/batcat ]; then
     ln -s "/usr/bin/batcat" "$HOME/bin/bat"
