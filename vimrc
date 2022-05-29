@@ -99,6 +99,4 @@ set background=dark
 call plug#end()
 
 colorscheme solarized
-" Overwrite Pmenu
-highlight Pmenu ctermbg=White ctermfg=Black
 
