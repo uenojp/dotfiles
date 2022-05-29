@@ -1,0 +1,27 @@
+{
+	"init": {
+		"prefix": "init",
+		"body": [
+			"CC     = gcc",
+			"CFLAGS = -Wall -Wextra",
+			"LIBS   =",
+            "",
+			"PROGRAM = $0",
+			"SRCS    = \\$(wildcard *.c)",
+			"OBJS    = \\$(SRCS:.c=.o)",
+			"",
+			"\\$(PROGRAM): \\$(OBJS)",
+			"\t\\$(CC) -o \\$(PROGRAM) \\$(OBJS) \\$(LIBS)",
+			"",
+			"%.o: %.c",
+			"\t\\$(CC) \\$(CFLAGS) -o \\$@ -c \\$<",
+			"",
+			"clean:",
+			"\trm -f \\$(PROGRAM) \\$(OBJS)",
+			"",
+			".PHONY: clean",
+			""
+		],
+		"description": ""
+	}
+}
