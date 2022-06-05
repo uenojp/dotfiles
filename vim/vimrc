@@ -81,7 +81,7 @@ command R ALERename
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 " Go to definition in new tab
-nmap gd :tab split<CR>:LspDefinition<CR>
+nmap gd :LspDefinition<CR>
 command F LspDocumentFormat
 
 Plug 'prabirshrestha/asyncomplete.vim'
