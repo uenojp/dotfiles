@@ -39,6 +39,10 @@ SHELL=/bin/zsh; curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_LATE
 source "$HOME/.zshrc"
 nvm install node'
 
+# Install gibo
+curl -L https://raw.github.com/simonwhitaker/gibo/master/gibo \
+    -so ~/bin/gibo && chmod +x ~/bin/gibo && gibo update
+
 ### Config
 # Configure Git environment
 git config --global user.name "Takahiro Ueno"
