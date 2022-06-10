@@ -53,6 +53,7 @@ git config --global init.defaultBranch main
 
 # Create symlink
 ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
+ln -s "$HOME/.dotfiles/latexmkrc" "$HOME/.latexmkrc"
 
 if [ -e /usr/bin/batcat ]; then
     ln -s "/usr/bin/batcat" "$HOME/bin/bat"
