@@ -4,11 +4,13 @@ set -eux
 
 mkdir -p "$HOME/bin"
 
-### Install
-sudo apt-get update
-sudo apt-get upgrade -y
+#
+# Install
+#
+apt-get update
+apt-get upgrade -y
 
-sudo apt-get install -y \
+apt-get install -y \
     bat \
     build-essential \
     curl \
@@ -22,28 +24,22 @@ sudo apt-get install -y \
     xclip \
     zsh \
     ;
-sudo chsh -s /bin/zsh "$USER"
+chsh -s /bin/zsh "$USER"
 
-# Install zprezto
-zsh -c 'git clone --recursive https://github.com/utaka/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-cd "${ZDOTDIR:-$HOME}/.zprezto"
-git switch utaka
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done'
+./install/zprezto.sh &
+p1=$!
+./install/nvm.sh &
+p2=$!
+./install/gibo.sh &
+p3=$!
 
-# Install nvm and node
-zsh -c $'NVM_LATEST=$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | awk \'/tag_name/{print $2}\' | tr -d \'",\')
-SHELL=/bin/zsh; curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_LATEST/install.sh" | bash
-source "$HOME/.zshrc"
-nvm install node'
+wait $p1
+wait $p2
+wait $p3
 
-# Install gibo
-curl -L https://raw.github.com/simonwhitaker/gibo/master/gibo \
-    -so "$HOME/bin/gibo" && chmod +x "$HOME/bin/gibo" && "$HOME/bin/gibo" update
-
-### Config
+#
+# Config
+#
 # Configure Git environment
 git config --global user.name "Takahiro Ueno"
 git config --global user.email "uenotakahiro.jp@gmail.com"

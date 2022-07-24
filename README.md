@@ -4,7 +4,7 @@
 ```bash
 git clone https://github.com/utaka/dotfiles "$HOME/.dotfiles"
 cd "$HOME/.dotfiles"
-./setup.sh
+sudo ./setup.sh
 
 # GNOME and XDG user directory
 ./gnome.sh
