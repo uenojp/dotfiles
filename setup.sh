@@ -16,10 +16,12 @@ apt-get install -y \
     curl \
     gdb \
     gh \
+    jq \
     nkf \
     shellcheck \
     tree \
     vim-gtk \
+    w3m \
     wget \
     xclip \
     zsh \
