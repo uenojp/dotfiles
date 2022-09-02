@@ -28,16 +28,9 @@ sudo apt-get install -y \
     ;
 chsh -s /bin/zsh "$USER"
 
-./install/zprezto.sh &
-p1=$!
-./install/nvm.sh &
-p2=$!
-./install/gibo.sh &
-p3=$!
-
-wait $p1
-wait $p2
-wait $p3
+./install/zprezto.sh
+./install/nvm.sh
+./install/gibo.sh
 
 #
 # Config
@@ -50,10 +43,16 @@ git config --global core.editor vim
 git config --global init.defaultBranch main
 
 # Create symlink
-ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
-ln -s "$HOME/.dotfiles/latexmkrc" "$HOME/.latexmkrc"
+backup() {
+    targets=("$@")
+    for target in ${targets[@]};do
+        [ -e "$target" ] && mv "$target" "${target}.bak"
+    done
+    exit 0
+}
 
-if [ -e /usr/bin/batcat ]; then
-    ln -s "/usr/bin/batcat" "$HOME/bin/bat"
-fi
+backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
+backup "$HOME/.latexmkrc"          && ln -s "$HOME/.dotfiles/latexmkrc" "$HOME/.latexmkrc"
+
+ln -s "/usr/bin/batcat" "$HOME/bin/bat"
 
