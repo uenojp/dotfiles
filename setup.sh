@@ -7,10 +7,10 @@ mkdir -p "$HOME/bin"
 #
 # Install
 #
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 
-apt-get install -y \
+sudo apt-get install -y \
     bat \
     build-essential \
     curl \
