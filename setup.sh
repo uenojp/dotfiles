@@ -48,7 +48,7 @@ backup() {
     for target in ${targets[@]};do
         [ -e "$target" ] && mv "$target" "${target}.bak"
     done
-    exit 0
+    return 0
 }
 
 backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
