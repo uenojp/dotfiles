@@ -31,6 +31,7 @@ chsh -s /bin/zsh "$USER"
 ./install/zprezto.sh
 ./install/nvm.sh
 ./install/gibo.sh
+./install/google-chrome.sh
 
 #
 # Config
