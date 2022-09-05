@@ -19,6 +19,7 @@ sudo apt-get install -y \
     jq \
     nkf \
     shellcheck \
+    tmux \
     tree \
     vim-gtk \
     w3m \
