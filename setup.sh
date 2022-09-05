@@ -54,6 +54,7 @@ backup() {
 
 backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
 backup "$HOME/.latexmkrc"          && ln -s "$HOME/.dotfiles/latexmkrc" "$HOME/.latexmkrc"
+backup "$HOME/.tmux.conf"          && ln -s "$HOME/.dotfiles/tmux.conf" "$HOME/.tmux.conf"
 
 ln -s "/usr/bin/batcat" "$HOME/bin/bat"
 
