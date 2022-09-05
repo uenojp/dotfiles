@@ -6,7 +6,7 @@ set -eux
 # Install One Half Dark
 #
 # ref. https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
-sudo apt install wget
+sudo apt-get install wget -y
 wget -O- https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh | bash
 
 uuid="$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "\',[]" | awk '{print $NF}')"
