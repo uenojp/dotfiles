@@ -13,6 +13,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y \
     bat \
     build-essential \
+    cmake \
     curl \
     gdb \
     gh \
