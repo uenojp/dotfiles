@@ -34,6 +34,9 @@ set scrolloff=5
 " Auto-indent on newline
 set autoindent
 
+" Enable mouse
+set mouse=a
+
 " Auto-indent on wrapped lines
 if exists('+breakindent')
     set breakindent
