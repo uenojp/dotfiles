@@ -25,7 +25,7 @@ cd install-tl-20*
 curl -LO https://osdn.net/projects/mytexpert/downloads/26068/jlisting.sty.bz2
 bzip2 -d jlisting.sty.bz2
 chmod 644 jlisting.sty
-mkdir -p "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/jlisting/"
+sudo mkdir -p "$(kpsewhich -var-value TEXMFLOCAL)/tex/latex/jlisting/"
 mv jlisting.sty "$_"
 cd "$_"
 mktexlsr
