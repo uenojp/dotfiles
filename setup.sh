@@ -59,4 +59,5 @@ backup "$HOME/.latexmkrc"          && ln -s "$HOME/.dotfiles/latexmkrc" "$HOME/.
 backup "$HOME/.tmux.conf"          && ln -s "$HOME/.dotfiles/tmux.conf" "$HOME/.tmux.conf"
 
 ln -s "/usr/bin/batcat" "$HOME/bin/bat"
+ln -s "$HOME/.dotfiles/bin/obs" "$HOME/bin/obs"
 
