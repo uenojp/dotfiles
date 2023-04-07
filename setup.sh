@@ -17,6 +17,7 @@ sudo apt-get install -y \
     curl \
     gdb \
     gh \
+    gnome-shell-pomodoro \
     jq \
     nkf \
     shellcheck \
