@@ -37,6 +37,8 @@ set autoindent
 " Enable mouse
 set mouse=a
 
+set laststatus=2
+
 " Auto-indent on wrapped lines
 if exists('+breakindent')
     set breakindent
