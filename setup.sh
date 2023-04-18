@@ -46,6 +46,10 @@ git config --global color.ui auto
 git config --global core.editor vim
 git config --global init.defaultBranch main
 
+git config --global alias.remote-ssh $'!git remote set-url origin "$(git remote -v | head -1 | awk \'{print $2}\' | sed \'s_https://_git@_; s_/_:_\')"'
+git config --global alias.prev 'checkout HEAD^'
+git config --global alias.next $'!git checkout "$(git log --format=%H "$(git name-rev --name-only HEAD | sed \'s/~.*$//\')" | grep -B1 -m1 "$(git rev-parse HEAD)" | head -1)"'
+
 # Create symlink
 backup() {
     targets=("$@")
