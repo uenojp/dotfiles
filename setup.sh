@@ -65,4 +65,5 @@ backup "$HOME/.tmux.conf"          && ln -s "$HOME/.dotfiles/tmux.conf" "$HOME/.
 
 ln -s "/usr/bin/batcat" "$HOME/bin/bat"
 ln -s "$HOME/.dotfiles/bin/obs" "$HOME/bin/obs"
+ln -s "$HOME/.dotfiles/bin/dict" "$HOME/bin/dict"
 
