@@ -1,0 +1,11 @@
+BasedOnStyle: Google
+
+IndentWidth: 4
+AlignOperands: false
+ColumnLimit: 100
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+

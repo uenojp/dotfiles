@@ -13,6 +13,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y \
     bat \
     build-essential \
+    clang-format \
     cmake \
     curl \
     gdb \
@@ -59,11 +60,12 @@ backup() {
     return 0
 }
 
-backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
+backup "$HOME/.clang-format"       && ln -s "$HOME/.dotfiles/clang-format" "$HOME/.clang-format"
 backup "$HOME/.latexmkrc"          && ln -s "$HOME/.dotfiles/latexmkrc" "$HOME/.latexmkrc"
 backup "$HOME/.tmux.conf"          && ln -s "$HOME/.dotfiles/tmux.conf" "$HOME/.tmux.conf"
+backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
 
 ln -s "/usr/bin/batcat" "$HOME/bin/bat"
-ln -s "$HOME/.dotfiles/bin/obs" "$HOME/bin/obs"
 ln -s "$HOME/.dotfiles/bin/dict" "$HOME/bin/dict"
+ln -s "$HOME/.dotfiles/bin/obs" "$HOME/bin/obs"
 
