@@ -16,6 +16,7 @@ sudo apt-get install -y \
     clang-format \
     cmake \
     curl \
+    gawk \
     gdb \
     gh \
     gnome-shell-pomodoro \
