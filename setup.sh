@@ -68,5 +68,6 @@ backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim" "$HOME/.vim"
 
 ln -s "/usr/bin/batcat" "$HOME/bin/bat"
 ln -s "$HOME/.dotfiles/bin/dict" "$HOME/bin/dict"
+ln -s "$HOME/.dotfiles/bin/mjoin" "$HOME/bin/mjoin"
 ln -s "$HOME/.dotfiles/bin/obs" "$HOME/bin/obs"
 
