@@ -1,0 +1,8 @@
+#!/bin/bash -e
+#
+# Open LINE
+# ref. https://qiita.com/yuk1_37/items/3b65906a2e82343f737d
+#
+
+google-chrome --app=chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html
+
