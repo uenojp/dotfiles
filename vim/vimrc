@@ -81,7 +81,6 @@ let g:ale_fixers = {
     \   'cpp': ['clang-format'],
     \   'rust': ['rustfmt'],
     \ }
-command R ALERename
 
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
@@ -104,8 +103,6 @@ imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab
 smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
-
-Plug 'mattn/vim-maketable'
 
 Plug 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
