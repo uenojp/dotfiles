@@ -22,6 +22,7 @@ sudo apt-get install -y \
     gnome-shell-pomodoro \
     jq \
     nkf \
+    rename \
     shellcheck \
     tmux \
     tree \
