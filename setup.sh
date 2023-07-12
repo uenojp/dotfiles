@@ -72,4 +72,5 @@ ln -s "$HOME/.dotfiles/bin/dict" "$HOME/bin/dict"
 ln -s "$HOME/.dotfiles/bin/line" "$HOME/bin/line"
 ln -s "$HOME/.dotfiles/bin/mjoin" "$HOME/bin/mjoin"
 ln -s "$HOME/.dotfiles/bin/obs" "$HOME/bin/obs"
+ln -s "$HOME/.dotfiles/bin/o" "$HOME/bin/o"
 
