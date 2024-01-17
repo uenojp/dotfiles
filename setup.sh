@@ -27,22 +27,27 @@ sudo apt-get install -y \
     xclip \
     zsh \
     ;
+
 chsh -s /bin/zsh "$USER"
+curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir="$HOME/bin"
 
 backup() {
     targets=("$@")
-    for target in "${targets[@]}";do
+    for target in "${targets[@]}"; do
         [ -e "$target" ] && mv "$target" "${target}.bak"
     done
 }
 
-backup "$HOME/.clang-format"       && ln -s "$HOME/.dotfiles/clang-format"  "$HOME/.clang-format"
-backup "$HOME/.latexmkrc"          && ln -s "$HOME/.dotfiles/latexmkrc"     "$HOME/.latexmkrc"
-backup "$HOME/.tmux.conf"          && ln -s "$HOME/.dotfiles/tmux.conf"     "$HOME/.tmux.conf"
-backup "$HOME/.vim" "$HOME/.vimrc" && ln -s "$HOME/.dotfiles/vim"           "$HOME/.vim"
+backup "$HOME/.zshenv"                  && ln -sf "$HOME/.dotfiles/zshenv"        "$HOME/.zshenv"
+backup "$HOME/.zshrc"                   && ln -sf "$HOME/.dotfiles/zshrc"         "$HOME/.zshrc"
+backup "$HOME/.clang-format"            && ln -sf "$HOME/.dotfiles/clang-format"  "$HOME/.clang-format"
+backup "$HOME/.config/starship.toml"    && ln -sf "$HOME/.dotfiles/starship.toml" "$HOME/.config/starship.toml"
+backup "$HOME/.latexmkrc"               && ln -sf "$HOME/.dotfiles/latexmkrc"     "$HOME/.latexmkrc"
+backup "$HOME/.tmux.conf"               && ln -sf "$HOME/.dotfiles/tmux.conf"     "$HOME/.tmux.conf"
+backup "$HOME/.vim" "$HOME/.vimrc"      && ln -sf "$HOME/.dotfiles/vim"           "$HOME/.vim"
 
-ln -s "/usr/bin/batcat" "$HOME/bin/bat"
-ln -s "$HOME/.dotfiles/bin/line"    "$HOME/bin/line"
-ln -s "$HOME/.dotfiles/bin/obs"     "$HOME/bin/obs"
-ln -s "$HOME/.dotfiles/bin/o"       "$HOME/bin/o"
+ln -sf "/usr/bin/batcat"             "$HOME/bin/bat"
+ln -sf "$HOME/.dotfiles/bin/line"    "$HOME/bin/line"
+ln -sf "$HOME/.dotfiles/bin/obs"     "$HOME/bin/obs"
+ln -sf "$HOME/.dotfiles/bin/o"       "$HOME/bin/o"
 
