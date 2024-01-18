@@ -47,6 +47,8 @@ source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 
 alias mkdir='mkdir -p'
 alias cp='cp -i'

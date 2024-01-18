@@ -14,6 +14,7 @@ sudo apt-get install -y \
     clang-format \
     cmake \
     curl \
+    fzf \
     foot \
     gawk \
     gdb \
