@@ -1,17 +1,52 @@
 [ -r /etc/zsh/zshrc ] && source /etc/zsh/zshrc
 
+autoload -U compinit && compinit
+
 setopt no_beep
+
+HISTFILE="$HOME/.zsh_history"
+SAVEHIST=1048576
+HISTSIZE=1024
+setopt share_history
+setopt append_history
+setopt extended_history
+setopt hist_ignore_dups
+setopt hist_expire_dups_first
+# cmd --path=<filename expantion is performed here>
+setopt magic_equal_subst
+
+setopt interactive_comments
+# Use >! instead of > when overwriting
+setopt noclobber
+
+setopt pipefail
+
 # Emacs keybinds
 bindkey -e
 # Use '/' as delimiter
-export WORDCHARS="$(tr -d '/' <<< "$WORDCHARS")"
-# Set LS_COLORS
+WORDCHARS="$(tr -d '/' <<< "$WORDCHARS")"
+
 eval $(dircolors | sed 's/ow=..;../ow=01;35/')
 # Use LS_COLORS in completion
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-# Enable completion cache
+
 zstyle ':completion:*' use-cache yes
-autoload -Uz compinit && compinit
+# Approximate completion, e.g. cat typo<TAB> -> cat type
+setopt correct
+zstyle ':completion:*' completer _complete _approximate
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+
+
+mkdir -p "$HOME/.zsh"
+
+[ ! -d "$HOME/.zsh/zsh-syntax-highlighting" ] &&
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+[ ! -d "$HOME/.zsh/zsh-autosuggestions/" ] && 
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
 
 alias mkdir='mkdir -p'
 alias cp='cp -i'
@@ -44,9 +79,6 @@ alias gp='git push'
 alias gb='git branch'
 alias gw='git switch'
 
-eval "$(starship init zsh)"
 
-source "$HOME/.dotfiles/zshenv.d/cargo.sh"
-source "$HOME/.dotfiles/zshenv.d/conda.sh"
-source "$HOME/.dotfiles/zshenv.d/nvm.sh"
+eval "$(starship init zsh)"
 

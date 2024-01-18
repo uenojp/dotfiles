@@ -1,6 +1,8 @@
 export EDITOR='vim'
 export VISUAL='vim'
 
+TIMEFMT='  real %*E  user %*U  kernel %*S  %J'
+
 # Remove duplicates
 typeset -gU PATH path
 path=(
@@ -10,5 +12,7 @@ path=(
     $path
 )
 
-TIMEFMT='  real %*E  user %*U  kernel %*S  %J'
+source "$HOME/.dotfiles/zshenv.d/cargo.sh"
+source "$HOME/.dotfiles/zshenv.d/conda.sh"
+source "$HOME/.dotfiles/zshenv.d/nvm.sh"
 
