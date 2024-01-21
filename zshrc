@@ -58,6 +58,7 @@ alias ln='ln -i'
 alias ls='ls --color=auto --group-directories-first'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias clip='xclip -selection clipboard'
 
 alias l='ls -1A'
 alias ll='ls -lh'
