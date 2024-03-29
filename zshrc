@@ -59,6 +59,8 @@ alias ls='ls --color=auto --group-directories-first'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias clip='xclip -selection clipboard'
+alias diff='diff -u --color=auto'
+alias grep='grep --color=auto'
 
 alias l='ls -1A'
 alias ll='ls -lh'
@@ -81,7 +83,6 @@ alias gl='git log --color=auto'
 alias gp='git push'
 alias gb='git branch'
 alias gw='git switch'
-
 
 eval "$(starship init zsh)"
 
