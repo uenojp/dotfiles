@@ -13,9 +13,10 @@ rmdir \
     "$HOME/Videos" \
     ;
 
+mkdir -p "$HOME/.desktop"
 mkdir -p "$HOME/dl"
 
-xdg-user-dirs-update --set DESKTOP "$HOME"
+xdg-user-dirs-update --set DESKTOP "$HOME/.desktop"
 xdg-user-dirs-update --set DOWNLOAD "$HOME/dl"
 xdg-user-dirs-update --set TEMPLATES "$HOME"
 xdg-user-dirs-update --set PUBLICSHARE "$HOME"
