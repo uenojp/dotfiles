@@ -6,7 +6,7 @@ setopt no_beep
 
 HISTFILE="$HOME/.zsh_history"
 SAVEHIST=1048576
-HISTSIZE=1024
+HISTSIZE=1048576
 setopt share_history
 setopt append_history
 setopt extended_history
