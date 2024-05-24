@@ -40,16 +40,16 @@ backup() {
 }
 
 mkdir -p "$HOME/.config"
-backup "$HOME/.zshenv"                  && ln -sf "$HOME/.dotfiles/zshenv"          "$HOME/.zshenv"
-backup "$HOME/.zshrc"                   && ln -sf "$HOME/.dotfiles/zshrc"           "$HOME/.zshrc"
-backup "$HOME/.clang-format"            && ln -sf "$HOME/.dotfiles/clang-format"    "$HOME/.clang-format"
+backup "$HOME/.zshenv"               	; ln -sf "$HOME/.dotfiles/zshenv"          "$HOME/.zshenv"
+backup "$HOME/.zshrc"                	; ln -sf "$HOME/.dotfiles/zshrc"           "$HOME/.zshrc"
+backup "$HOME/.clang-format"         	; ln -sf "$HOME/.dotfiles/clang-format"    "$HOME/.clang-format"
 #mkdir -p "$HOME/.config/foot" &&
-#    backup "$HOME/.config/foot.ini"     && ln -sf "$HOME/.dotfiles/foot.ini"        "$HOME/.config/foot/foot.ini"
-backup "$HOME/.wezterm.lua"             && ln -sf "$HOME/.dotfiles/wezterm.lua"     "$HOME/.wezterm.lua"
-backup "$HOME/.config/starship.toml"    && ln -sf "$HOME/.dotfiles/starship.toml"   "$HOME/.config/starship.toml"
-backup "$HOME/.latexmkrc"               && ln -sf "$HOME/.dotfiles/latexmkrc"       "$HOME/.latexmkrc"
-backup "$HOME/.tmux.conf"               && ln -sf "$HOME/.dotfiles/tmux.conf"       "$HOME/.tmux.conf"
-backup "$HOME/.vim" "$HOME/.vimrc"      && ln -sf "$HOME/.dotfiles/vim"             "$HOME/.vim"
+#    backup "$HOME/.config/foot.ini"     ; ln -sf "$HOME/.dotfiles/foot.ini"        "$HOME/.config/foot/foot.ini"
+backup "$HOME/.wezterm.lua"             ; ln -sf "$HOME/.dotfiles/wezterm.lua"     "$HOME/.wezterm.lua"
+backup "$HOME/.config/starship.toml"    ; ln -sf "$HOME/.dotfiles/starship.toml"   "$HOME/.config/starship.toml"
+backup "$HOME/.latexmkrc"               ; ln -sf "$HOME/.dotfiles/latexmkrc"       "$HOME/.latexmkrc"
+backup "$HOME/.tmux.conf"               ; ln -sf "$HOME/.dotfiles/tmux.conf"       "$HOME/.tmux.conf"
+backup "$HOME/.vim" "$HOME/.vimrc"      ; ln -sf "$HOME/.dotfiles/vim"             "$HOME/.vim"
 
 ln -sf "/usr/bin/batcat"             "$HOME/bin/bat"
 ln -sf "$HOME/.dotfiles/bin/line"    "$HOME/bin/line"
