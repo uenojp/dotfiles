@@ -7,6 +7,7 @@ mkdir -p "$HOME/bin"
 sudo apt-get update
 sudo apt-get upgrade -y
 
+# foot \
 sudo apt-get install -y \
     arp-scan \
     bat \
@@ -15,7 +16,6 @@ sudo apt-get install -y \
     cmake \
     curl \
     fzf \
-    # foot \
     gawk \
     gdb \
     gh \
