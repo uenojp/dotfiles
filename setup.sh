@@ -35,7 +35,9 @@ curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir="$HOME/bin"
 backup() {
     targets=("$@")
     for target in "${targets[@]}"; do
-        [ -e "$target" ] && mv "$target" "${target}.bak"
+        if [ -e "$target" ]; then
+            mv "$target" "${target}.bak"
+        fi
     done
 }
 
