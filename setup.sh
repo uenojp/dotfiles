@@ -58,3 +58,10 @@ ln -sf "$HOME/.dotfiles/bin/line"    "$HOME/bin/line"
 ln -sf "$HOME/.dotfiles/bin/obs"     "$HOME/bin/obs"
 ln -sf "$HOME/.dotfiles/bin/o"       "$HOME/bin/o"
 
+git config --global user.name "Takahiro Ueno"
+git config --global user.email "uenotakahiro.jp@gmail.com"
+git config --global color.ui auto
+git config --global core.editor vim
+git config --global core.quotepath false
+git config --global init.defaultBranch main
+
