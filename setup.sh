@@ -7,7 +7,6 @@ mkdir -p "$HOME/bin"
 sudo apt-get update
 sudo apt-get upgrade -y
 
-# foot \
 sudo apt-get install -y \
     arp-scan \
     bat \
@@ -45,8 +44,6 @@ mkdir -p "$HOME/.config"
 backup "$HOME/.zshenv"               	; ln -sf "$HOME/.dotfiles/zshenv"          "$HOME/.zshenv"
 backup "$HOME/.zshrc"                	; ln -sf "$HOME/.dotfiles/zshrc"           "$HOME/.zshrc"
 backup "$HOME/.clang-format"         	; ln -sf "$HOME/.dotfiles/clang-format"    "$HOME/.clang-format"
-#mkdir -p "$HOME/.config/foot" &&
-#    backup "$HOME/.config/foot.ini"     ; ln -sf "$HOME/.dotfiles/foot.ini"        "$HOME/.config/foot/foot.ini"
 backup "$HOME/.wezterm.lua"             ; ln -sf "$HOME/.dotfiles/wezterm.lua"     "$HOME/.wezterm.lua"
 backup "$HOME/.config/starship.toml"    ; ln -sf "$HOME/.dotfiles/starship.toml"   "$HOME/.config/starship.toml"
 backup "$HOME/.latexmkrc"               ; ln -sf "$HOME/.dotfiles/latexmkrc"       "$HOME/.latexmkrc"
