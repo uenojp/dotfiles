@@ -22,7 +22,7 @@ sudo apt-get install -y \
     shellcheck \
     tmux \
     tree \
-    vim-gtk \
+    vim-gtk3 \
     wget \
     wireshark \
     xclip \
