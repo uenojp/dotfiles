@@ -41,19 +41,19 @@ backup() {
 }
 
 mkdir -p "$HOME/.config"
-backup "$HOME/.zshenv"               	; ln -sf "$HOME/.dotfiles/zshenv"          "$HOME/.zshenv"
-backup "$HOME/.zshrc"                	; ln -sf "$HOME/.dotfiles/zshrc"           "$HOME/.zshrc"
-backup "$HOME/.clang-format"         	; ln -sf "$HOME/.dotfiles/clang-format"    "$HOME/.clang-format"
-backup "$HOME/.wezterm.lua"             ; ln -sf "$HOME/.dotfiles/wezterm.lua"     "$HOME/.wezterm.lua"
-backup "$HOME/.config/starship.toml"    ; ln -sf "$HOME/.dotfiles/starship.toml"   "$HOME/.config/starship.toml"
-backup "$HOME/.latexmkrc"               ; ln -sf "$HOME/.dotfiles/latexmkrc"       "$HOME/.latexmkrc"
-backup "$HOME/.tmux.conf"               ; ln -sf "$HOME/.dotfiles/tmux.conf"       "$HOME/.tmux.conf"
-backup "$HOME/.vim" "$HOME/.vimrc"      ; ln -sf "$HOME/.dotfiles/vim"             "$HOME/.vim"
+backup "$HOME/.zshenv"                  ; ln -sf "$PWD/zshenv"          "$HOME/.zshenv"
+backup "$HOME/.zsh"                     ; ln -sf "$PWD/zsh"             "$HOME/.zsh" # =$ZDOTDIR defined in zshenv
+backup "$HOME/.clang-format"            ; ln -sf "$PWD/clang-format"    "$HOME/.clang-format"
+backup "$HOME/.wezterm.lua"             ; ln -sf "$PWD/wezterm.lua"     "$HOME/.wezterm.lua"
+backup "$HOME/.config/starship.toml"    ; ln -sf "$PWD/starship.toml"   "$HOME/.config/starship.toml"
+backup "$HOME/.latexmkrc"               ; ln -sf "$PWD/latexmkrc"       "$HOME/.latexmkrc"
+backup "$HOME/.tmux.conf"               ; ln -sf "$PWD/tmux.conf"       "$HOME/.tmux.conf"
+backup "$HOME/.vim" "$HOME/.vimrc"      ; ln -sf "$PWD/vim"             "$HOME/.vim"
 
-ln -sf "/usr/bin/batcat"             "$HOME/bin/bat"
-ln -sf "$HOME/.dotfiles/bin/line"    "$HOME/bin/line"
-ln -sf "$HOME/.dotfiles/bin/obs"     "$HOME/bin/obs"
-ln -sf "$HOME/.dotfiles/bin/o"       "$HOME/bin/o"
+ln -sf "/usr/bin/batcat"    "$HOME/bin/bat"
+ln -sf "$PWD/bin/line"      "$HOME/bin/line"
+ln -sf "$PWD/bin/obs"       "$HOME/bin/obs"
+ln -sf "$PWD/bin/o"         "$HOME/bin/o"
 
 git config --global user.name "Takahiro Ueno"
 git config --global user.email "uenotakahiro.jp@gmail.com"

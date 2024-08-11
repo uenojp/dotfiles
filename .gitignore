@@ -1,3 +1,6 @@
+zsh/.zcompdump
+zsh/.zcompcache/
+
 vim/plugged/
 vim/autoload/
 vim/.netrwhist

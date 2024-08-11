@@ -1,4 +1,4 @@
-[ -r /etc/zsh/zshrc ] && source /etc/zsh/zshrc
+mkdir -p "$ZDOTDIR"
 
 autoload -U compinit && compinit
 
@@ -36,20 +36,11 @@ setopt correct
 zstyle ':completion:*' completer _complete _approximate
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
-
-mkdir -p "$HOME/.zsh"
-
-[ ! -d "$HOME/.zsh/zsh-syntax-highlighting" ] &&
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
-source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-[ ! -d "$HOME/.zsh/zsh-autosuggestions/" ] && 
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
 source /usr/share/doc/fzf/examples/key-bindings.zsh
+source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-
+# Aliases
 alias mkdir='mkdir -p'
 alias cp='cp -i'
 alias mv='mv -i'
