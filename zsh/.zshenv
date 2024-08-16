@@ -7,6 +7,7 @@ TIMEFMT='  real %*E  user %*U  kernel %*S  %J'
 typeset -gU PATH path
 path=(
     $HOME/bin(N-/)
+    $HOME/.local/bin(N-/)
     $HOME/go/bin(N-/)
     /usr/local/go/bin(N-/)
     $path
