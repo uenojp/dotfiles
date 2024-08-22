@@ -35,7 +35,7 @@ cd tmp/
 # Requirements of latexindent
 #
 sudo apt-get install cpanminus
-sudo cpanm File YAML::Tiny File::HomeDir Unicode::GCString
+sudo cpanm YAML::Tiny File::HomeDir Unicode::GCString
 
 cd ..
 rm -r tmp/
