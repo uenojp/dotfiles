@@ -18,4 +18,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 # Change UI font
 gsettings set org.gnome.desktop.interface font-name "Noto Sans CJK JP 11"
+# Switch windows instead of window groups
+gsettings set org.gnome.shell.window-switcher current-workspace-only false
 
