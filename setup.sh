@@ -52,7 +52,7 @@ backup "$HOME/.vim" "$HOME/.vimrc"      ; ln -sf "$PWD/vim"             "$HOME/.
 
 ln -sf "/usr/bin/batcat"    "$HOME/bin/bat"
 ln -sf "$PWD/bin/line"      "$HOME/bin/line"
-ln -sf "$PWD/bin/obs"       "$HOME/bin/obs"
+ln -sf "$PWD/bin/ob"       "$HOME/bin/ob"
 ln -sf "$PWD/bin/o"         "$HOME/bin/o"
 
 git config --global user.name "Takahiro Ueno"
