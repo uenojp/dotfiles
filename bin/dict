@@ -3,12 +3,12 @@
 # Look up the meanings of English word in Japanese.
 #
 
-if [[ $# != 1 ]]; then
+if [[ $# == 0 ]]; then
     echo "Usage: $(basename "$0") WORD" >&2
     exit 1
 fi
 
-word="$1"
+words="$*" # Accepts multiple words as input (e.g., 'take care of' as a single phrase)
 DICTIONARY_PATH=/usr/share/dict/EIJIRO-1448.TXT
 
 if [[ ! -e "$DICTIONARY_PATH" ]]; then
@@ -16,5 +16,5 @@ if [[ ! -e "$DICTIONARY_PATH" ]]; then
     exit 1
 fi
 
-grep -i "■$word  {" "$DICTIONARY_PATH"
+grep -i "■$words  {" "$DICTIONARY_PATH"
 
