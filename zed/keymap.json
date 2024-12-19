@@ -1,0 +1,60 @@
+[
+  {
+    "bindings": {
+      "alt-m": "workspace::ToggleZoom"
+    }
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-j": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-k ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // tmux prefix
+      "ctrl-s": [
+        "terminal::SendKeystroke",
+        "ctrl-s"
+      ],
+      // backword-char
+      "ctrl-b": [
+        "terminal::SendKeystroke",
+        "ctrl-b"
+      ],
+      // previous-history
+      "ctrl-p": [
+        "terminal::SendKeystroke",
+        "ctrl-p"
+      ],
+      // next-history
+      "ctrl-n": [
+        "terminal::SendKeystroke",
+        "ctrl-n"
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": [
+        "workspace::SendKeystrokes",
+        "escape"
+      ]
+    }
+  }
+]
